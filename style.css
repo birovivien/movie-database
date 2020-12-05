@@ -2,9 +2,7 @@ body {
   background-color: #aeffdf;
 }
 
-.sign-in {
-  margin-left: 1%;
-}
+
 
 .navbar {
   padding: 1% 16%;
@@ -21,6 +19,19 @@ body {
   padding: 0 5%;
 }
 
+.sign-in {
+  margin: 1%;
+}
+
+.login-btn {
+  color: #fff;
+}
+
+.login-btn:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: .8;
+}
 
 .card-img-top:hover {
 	-webkit-transform: scale(1.2);
