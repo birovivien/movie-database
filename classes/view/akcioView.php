@@ -10,7 +10,9 @@ class akcioView{
         foreach($akcioArr as $akcio){
             echo "
               <div class='card'>
+              <a href='movie.php?id=$akcio[movieid]'>
                 <img class='card-img-top'$akcio[img]
+                </a>
               </div>
             ";
         }

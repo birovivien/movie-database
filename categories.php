@@ -72,14 +72,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-
+          <li class="nav-item">
+            <a class="nav-link" href="categories.php">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="allMovies.php">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="allSeries.php">Series</a>
+          </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Movie, series..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="submit"><a class="login-btn" href="addMovie.php">Add movie</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button>
 
 
       </div>
@@ -90,6 +99,30 @@
 
 
   <!-- Begin page content -->
+  <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> -->
+
+
+
       <div class="main-container">
         <h4 class="valami"> <a href="akcio.php">Akció »</a></h4>
         <div class="card-deck">
@@ -107,7 +140,7 @@
 
 
 
-        <h4 class="valami"><a href="kaland.php">Kaland »</a></h4>
+        <h4 class="valami">Kaland</h4>
         <div class="card-deck">
           <?php foreach($kalandFilmek as $kaland) { ?>
                 <div class='card'>
@@ -122,7 +155,7 @@
         </div>
 
 
-      <h4 class="valami"><a href="drama.php">Dráma »</a></h4>
+      <h4 class="valami">Dráma</h4>
       <div class="card-deck">
         <?php foreach($dramaFilmek as $drama) { ?>
               <div class='card'>
@@ -136,7 +169,7 @@
       </div>
 
 
-      <h4 class="valami"><a href="horror.php">Horror »</a></h4>
+      <h4 class="valami">Horror</h4>
       <div class="card-deck">
         <?php foreach($horrorFilmek as $horror) { ?>
               <div class='card'>
@@ -150,7 +183,7 @@
           ?>
       </div>
 
-      <h4 class="valami"><a href="animacio.php">Animáció »</a></h4>
+      <h4 class="valami">Animáció</h4>
       <div class="card-deck">
         <?php foreach($animacioFilmek as $animacio) { ?>
               <div class='card'>

@@ -1,19 +1,9 @@
 <?php
 
-class Dbc{
-    public static function connect(){
-        $host = "localhost";
-        $user = "root";
-        $password = "";
-        $dbname ="movie_database";
+	// connect to the database
+	$conn = mysqli_connect('localhost', 'root', '', 'movie_database');
 
-        try{
-            $con = new PDO("mysql:host=".$host.";dbname=".$dbname, $user,$password);
-            $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-            $con->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        }catch(PDOException $e){
-            echo "Connection failed " . $e->getMessage();
-        }
-        return $con;
-    }
-}
+	// check connection
+	if(!$conn){
+		echo 'Connection error: '. mysqli_connect_error();
+	}

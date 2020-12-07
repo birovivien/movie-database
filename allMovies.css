@@ -1,51 +1,4 @@
 body {
-  height: 100%;
-}
-
-body {
-  display: -ms-flexbox;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #aeffdf;
-}
-
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-  padding-top: 10%;
-  padding-bottom: 24%;
-}
-.form-signin .checkbox {
-  font-weight: 400;
-}
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-
-
-
-
-body {
   background-color: #aeffdf;
 }
 
@@ -80,12 +33,44 @@ body {
   opacity: .8;
 }
 
+.all-movies-title {
+  padding: 2% 0 6%;
+  font-size: 2.5rem;
+}
+
+.container {
+  padding: 0 0 5% 0;
+}
+
+.poster-container {
+  padding: 0;
+}
+
+.card-img-top {
+  max-width: 70%;
+  padding: 0 0 20% 0;
+}
+
 .card-img-top:hover {
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
   opacity: .8;
   cursor: pointer;
   transition-duration: .5s;
+}
+
+.add-movie {
+  margin: 10%;
+}
+
+.add-movie-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.add-movie-link:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 
@@ -131,6 +116,7 @@ body {
 .valami {
   margin: 7% 3% 0;
   color: black;
+  text-align: center;
 }
 
 

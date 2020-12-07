@@ -2,19 +2,17 @@
 
 class akcioModel{
     public static function getAkcio(){
-        $con = Dbc::connect();
-        $akcioArr = array();
 
-        $query=$con->prepare(
-            "SELECT * FROM akcio;"
-        );
-        $query->execute();
+        $sql = 'SELECT * FROM akcio';
 
-        while($row=$query->fetch()){
-            $akcioArr[] = $row;
-        }
+        $result = mysqli_query($conn, $sql);
 
-        return $akcioArr;
+        $movies = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        mysqli_free_result($result);
+        mysqli_close($conn);
+
+        return $result;
     }
 
 }
