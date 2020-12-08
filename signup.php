@@ -1,3 +1,6 @@
+<?php
+    session_start();
+ ?>
 
 <!doctype html>
 <html lang="en">
@@ -20,44 +23,37 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
+
 
 
 
 
   </head>
 
+  <body class="text-center">
   <section class="nav-section">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-      <a class="navbar-brand" href="#"> <img src="img/icon.png" alt=""> </a>
+      <a class="navbar-brand" href="index.php"> <img src="img/icon.png" alt=""> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Főoldal</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="category.html">Filmek</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="category.html">Sorozatok</a>
-          </li>
-
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Film, sorozat..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text">Log In</button>
+        <?php
+        include 'logout.php';
+        ?>
+
+        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
 
       </div>
     </nav>
@@ -65,26 +61,66 @@
   </section>
 
 
-  <body class="text-center">
-    <form class="form-signin">
 
-  <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
-  <label for="inputEmail" class="sr-only">Username</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
+
+
+  <div class="main-container">
+
+    <div class="content valami">
+
+        <section class="signup-form">
+          <h2>Sign Up</h2>
+          <form action="includes/signup.inc.php" method="post">
+            <input type="text" name="name" placeholder="Full name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="uid" placeholder="Username">
+            <input type="password" name="pwd" placeholder="Password">
+            <input type="password" name="pwdrepeat" placeholder="Repeat password"> <br>
+            <button type="submit" name="submit">Sign Up</button>
+          </form>
+
+          <?php
+            if(isset($_GET["error"])) {
+              if($_GET["error"] == "emptyinput") {
+                echo "<p> Fill in all fields! </p>";
+              } else if($_GET["error"] == "invaliduid") {
+                echo "<p> Choose a proper username! </p>";
+              } else if($_GET["error"] == "invalidemail") {
+                echo "<p> Choose a proper email! </p>";
+              } else if($_GET["error"] == "passwordsdontmatch") {
+                echo "<p> Passwords don't match! </p>";
+              } else if($_GET["error"] == "stmtfailed") {
+                echo "<p> Something went wrong, try again! </p>";
+              } else if($_GET["error"] == "usernametaken") {
+                echo "<p> Username already taken! </p>";
+              } else if($_GET["error"] == "none") {
+                echo "<p> You have successfully signed up! </p>";
+              }
+            }
+          ?>
+
+        </section>
+
+
+
+
+          </div>
+        </div>
+    </div>
   </div>
-  <button class="btn btn-lg btn-dark btn-block" type="submit">Log In</button>
-</form>
 
 
 </body>
-
+  <footer class="footer mt-auto py-3">
+    <div class="container-footer">
+      <span>Copyright 2020</span>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script>
     window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
   </script>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 </html>

@@ -26,7 +26,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -43,12 +43,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Movie, series..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button>
+        <?php
+        include 'logout.php';
+        ?>
+
+        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button> -->
 
 
       </div>
@@ -57,29 +61,6 @@
   </section>
 
 
-
-  <!-- Begin page content -->
-  <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/1.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/2.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/3.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> -->
 
 
 

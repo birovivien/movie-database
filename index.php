@@ -1,5 +1,5 @@
 <?php
-    include('classes/dbc.php');
+    include('includes/dbc.php');
 
     $sqlAkcio = 'SELECT * FROM akcio';
     $result = mysqli_query($conn, $sqlAkcio);
@@ -24,7 +24,7 @@
     // mysqli_free_result($result);
     //
     // mysqli_close($conn);
-
+    session_start();
 
 
 ?>
@@ -37,8 +37,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v4.1.1">
+
   <title>Filmadatbázis</title>
 
 
@@ -56,7 +55,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -72,21 +71,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Movie, series..." aria-label="Search">
+        <!-- <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Film, sorozat..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button>
+        <?php
+        include 'logout.php';
+        ?>
+
+
+        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
 
 
       </div>
     </nav>
 
   </section>
-
 
 
   <!-- Begin page content -->

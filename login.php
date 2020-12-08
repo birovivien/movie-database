@@ -1,3 +1,6 @@
+<?php
+    session_start();
+ ?>
 
 <!doctype html>
 <html lang="en">
@@ -20,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
 
 
 
@@ -40,12 +43,17 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Film, sorozat..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text">Log In</button>
+        <?php
+        include 'logout.php';
+        ?>
+
+        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
 
       </div>
     </nav>
@@ -60,17 +68,22 @@
 
     <div class="content valami">
 
-      <form class="form-signin">
+    <form class="form-signin" action="includes/login.inc.php" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
+      <input type="text" class="form-control" name="uid" placeholder="Username/Email" autofocus>
+      <input type="password" class="form-control" name="pwd" placeholder="Password">
+      <button class="btn btn-lg btn-dark btn-block" type="submit" name="submit">Log In</button>
+    </form>
 
-    <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
-    <label for="inputEmail" class="sr-only">Username</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-    </div>
-    <button class="btn btn-lg btn-dark btn-block" type="submit">Log In</button>
-  </form>
+    <?php
+      if(isset($_GET["error"])) {
+        if($_GET["error"] == "emptyinput") {
+          echo "<p> Fill in all fields! </p>";
+        } else if($_GET["error"] == "wronglogin") {
+          echo "<p> Incorrect login credentials! </p>";
+        }
+      }
+    ?>
 
 
           </div>

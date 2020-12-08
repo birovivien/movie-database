@@ -1,5 +1,5 @@
 <?php
-    include('classes/dbc.php');
+    include('includes/dbc.php');
 
     $sql = 'SELECT * FROM kaland ORDER BY name';
     $result = mysqli_query($conn, $sql);
@@ -9,7 +9,7 @@
     //
     // mysqli_close($conn);
 
-
+    session_start();
 
 ?>
 
@@ -39,7 +39,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
-  <link href="allMovies.css" rel="stylesheet">
+  <link href="css/allMovies.css" rel="stylesheet">
 
 </head>
 
@@ -55,16 +55,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-
-
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Film, sorozat..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
 
+        <?php
+        include 'logout.php';
+        ?>
 
-                <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button>
+        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
+        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
 
 
       </div>
@@ -92,7 +94,15 @@
       			<?php } ?>
 
       		</div>
-            <button class="add-movie btn btn-dark my-2 my-sm-0" type="submit"><a class="add-movie-link" href="addMovie.php">Add movie</a></button>
+
+          <?php
+            if(isset($_SESSION["useruid"])) {
+              if($_SESSION["useruid"] == "admin")
+              echo "<button class='add-movie btn btn-dark my-2 my-sm-0' type='submit'><a class='add-movie-link' href='addMovie.php'>Add movie</a></button>";
+            }
+          ?>
+
+            <!-- <button class="add-movie btn btn-dark my-2 my-sm-0" type="submit"><a class="add-movie-link" href="addMovie.php">Add movie</a></button> -->
       	</div>
 
     </div>
