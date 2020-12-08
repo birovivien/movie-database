@@ -1,7 +1,7 @@
 <?php
     include('includes/dbc.php');
 
-    $sql = 'SELECT * FROM horror ORDER BY name';
+    $sql = 'SELECT * FROM movies WHERE category = "horror" ORDER BY name';
     $result = mysqli_query($conn, $sql);
     $horrorFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

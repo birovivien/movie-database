@@ -1,7 +1,7 @@
 <?php
     include('includes/dbc.php');
 
-    $sql = 'SELECT * FROM kaland ORDER BY name';
+    $sql = 'SELECT * FROM movies WHERE category = "kaland" ORDER BY name';
     $result = mysqli_query($conn, $sql);
     $kalandFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2020 at 06:44 PM
+-- Generation Time: Dec 08, 2020 at 07:04 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -20,131 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `movie_database`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `akcio`
---
-
-CREATE TABLE `akcio` (
-  `movieid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `img` varchar(200) NOT NULL,
-  `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `akcio`
---
-
-INSERT INTO `akcio` (`movieid`, `name`, `description`, `img`, `category`) VALUES
-(1, 'Baby Driver', 'Lorem ipsum', 'babydriver.jpg', 'akció'),
-(2, 'Casino Royale', 'Lorem ipsum', 'casinoroyale.jpg', 'akció'),
-(3, 'Dredd', 'Lorem ipsum', 'dredd.jpg', 'akció'),
-(4, 'John Wick', 'Lorem ipsum', 'johnwick.jpg', 'akció'),
-(5, 'Mad Max', 'Lorem ipsum', 'madmax.jpg', 'akció');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `animacio`
---
-
-CREATE TABLE `animacio` (
-  `movieid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `img` varchar(200) NOT NULL,
-  `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `animacio`
---
-
-INSERT INTO `animacio` (`movieid`, `name`, `description`, `img`, `category`) VALUES
-(21, 'Madagascar', 'Lorem ipsum', 'madagascar.jpeg', 'animáció'),
-(22, 'Spiderman', 'Lorem ipsum', 'spiderman.jpg', 'animáció'),
-(23, 'The Little Mermaid', 'Lorem ipsum', 'thelittlemermaid.jpeg', 'animáció'),
-(24, 'The Princess and the Frog', 'Lorem ipsum', 'theprincessandthefrog.jpeg', 'animáció'),
-(25, 'Wall-E', 'Lorem ipsum', 'walle.jpg', 'animáció');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drama`
---
-
-CREATE TABLE `drama` (
-  `movieid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `img` varchar(200) NOT NULL,
-  `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `drama`
---
-
-INSERT INTO `drama` (`movieid`, `name`, `description`, `img`, `category`) VALUES
-(11, 'Australia', 'Lorem ipsum', 'australia.jpg', 'dráma'),
-(12, 'Denial', 'Lorem ipsum', 'denial.jpeg', 'dráma'),
-(13, 'Inception', 'Lorem ipsum', 'inception.jpg', 'dráma'),
-(14, 'Into the Sky', 'Lorem ipsum', 'intothesky.jpeg', 'dráma'),
-(15, 'Moonlight', 'Lorem ipsum', 'moonlight.jpeg', 'dráma');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `horror`
---
-
-CREATE TABLE `horror` (
-  `movieid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `img` varchar(200) NOT NULL,
-  `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `horror`
---
-
-INSERT INTO `horror` (`movieid`, `name`, `description`, `img`, `category`) VALUES
-(16, 'Friday the 13th', 'Lorem ipsum', 'fridaythe13th.jpeg', 'horror'),
-(17, 'Poltergeist', 'Lorem ipsum', 'poltergeist.jpg', 'horror'),
-(18, 'The Descent', 'Lorem ipsum', 'thedescent.jpeg', 'horror'),
-(19, 'The Exorcist', 'Lorem ipsum', 'theexorcist.jpeg', 'horror'),
-(20, 'The Shining', 'Lorem ipsum', 'theshining.jpeg', 'horror');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `kaland`
---
-
-CREATE TABLE `kaland` (
-  `movieid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `img` varchar(200) NOT NULL,
-  `category` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `kaland`
---
-
-INSERT INTO `kaland` (`movieid`, `name`, `description`, `img`, `category`) VALUES
-(6, 'Back to the Future', 'Lorem ipsum', 'backtothefuture.jpg', 'kaland'),
-(7, 'Inception', 'Lorem ipsum', 'inception.jpg', 'kaland'),
-(8, 'Interstellar', 'Lorem ipsum', 'interstellar.jpg', 'kaland'),
-(9, 'Lord of the Rings', 'Lorem ipsum', 'lordoftherings.jpg', 'kaland'),
-(10, 'Space Odyssey', 'Lorem ipsum', 'spaceodyssey.jpg', 'kaland');
 
 -- --------------------------------------------------------
 
@@ -170,16 +45,16 @@ INSERT INTO `movies` (`movieid`, `name`, `description`, `img`, `category`) VALUE
 (3, 'Dredd', 'Lorem ipsum', 'dredd.jpg', 'akció'),
 (4, 'John Wick', 'Lorem ipsum', 'johnwick.jpg', 'akció'),
 (5, 'Mad Max', 'Lorem ipsum', 'madmax.jpg', 'akció'),
-(6, 'Back to the Future', 'Lorem ipsum', 'backtothefuture.jpg', 'kaland'),
-(7, 'Inception', 'Lorem ipsum', 'inception.jpg', 'kaland'),
-(8, 'Interstellar', 'Lorem ipsum', 'interstellar.jpg', 'kaland'),
-(9, 'Lord of the Rings', 'Lorem ipsum', 'lordoftherings.jpg', 'kaland'),
-(10, 'Space Odyssey', 'Lorem ipsum', 'spaceodyssey.jpg', 'kaland'),
-(11, 'Australia', 'Lorem ipsum', 'australia.jpg', 'dráma'),
-(12, 'Denial', 'Lorem ipsum', 'denial.jpeg', 'dráma'),
-(13, 'Inception', 'Lorem ipsum', 'inception.jpg', 'dráma'),
-(14, 'Into the Sky', 'Lorem ipsum', 'intothesky.jpeg', 'dráma'),
-(15, 'Moonlight', 'Lorem ipsum', 'moonlight.jpeg', 'dráma'),
+(6, 'Australia', 'Lorem ipsum', 'australia.jpg', 'dráma'),
+(7, 'Denial', 'Lorem ipsum', 'denial.jpeg', 'dráma'),
+(8, 'Inception', 'Lorem ipsum', 'inception.jpg', 'dráma'),
+(9, 'Into the Sky', 'Lorem ipsum', 'intothesky.jpeg', 'dráma'),
+(10, 'Moonlight', 'Lorem ipsum', 'moonlight.jpeg', 'dráma'),
+(11, 'Back to the Future', 'Lorem ipsum', 'backtothefuture.jpg', 'kaland'),
+(12, 'Inception', 'Lorem ipsum', 'inception.jpg', 'kaland'),
+(13, 'Interstellar', 'Lorem ipsum', 'interstellar.jpg', 'kaland'),
+(14, 'Lord of the Rings', 'Lorem ipsum', 'lordoftherings.jpg', 'kaland'),
+(15, 'Space Odyssey', 'Lorem ipsum', 'spaceodyssey.jpg', 'kaland'),
 (16, 'Friday the 13th', 'Lorem ipsum', 'fridaythe13th.jpeg', 'horror'),
 (17, 'Poltergeist', 'Lorem ipsum', 'poltergeist.jpg', 'horror'),
 (18, 'The Descent', 'Lorem ipsum', 'thedescent.jpeg', 'horror'),
@@ -223,6 +98,12 @@ INSERT INTO `users` (`usersId`, `usersName`, `usersEmail`, `userUid`, `usersPwd`
 --
 
 --
+-- Indexes for table `movies`
+--
+ALTER TABLE `movies`
+  ADD PRIMARY KEY (`movieid`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -231,6 +112,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `movies`
+--
+ALTER TABLE `movies`
+  MODIFY `movieid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `users`

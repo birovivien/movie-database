@@ -1,23 +1,23 @@
 <?php
     include('includes/dbc.php');
 
-    $sqlAkcio = 'SELECT * FROM akcio';
+    $sqlAkcio = 'SELECT * FROM movies WHERE category = "akció"';
     $result = mysqli_query($conn, $sqlAkcio);
     $akcioFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlKaland = 'SELECT * FROM kaland';
+    $sqlKaland = 'SELECT * FROM movies WHERE category = "kaland"';
     $result = mysqli_query($conn, $sqlKaland);
     $kalandFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlDrama = 'SELECT * FROM drama';
+    $sqlDrama = 'SELECT * FROM movies WHERE category = "dráma"';
     $result = mysqli_query($conn, $sqlDrama);
     $dramaFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlHorror = 'SELECT * FROM horror';
+    $sqlHorror = 'SELECT * FROM movies WHERE category = "horror"';
     $result = mysqli_query($conn, $sqlHorror);
     $horrorFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlAnimacio = 'SELECT * FROM animacio';
+    $sqlAnimacio = 'SELECT * FROM movies WHERE category = "animáció"';
     $result = mysqli_query($conn, $sqlAnimacio);
     $animacioFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
