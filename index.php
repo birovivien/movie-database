@@ -1,23 +1,23 @@
 <?php
     include('includes/dbc.php');
 
-    $sqlAkcio = 'SELECT * FROM movies WHERE category = "akció"';
+    $sqlAkcio = 'SELECT * FROM movies WHERE category = "action" LIMIT 5';
     $result = mysqli_query($conn, $sqlAkcio);
     $akcioFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlKaland = 'SELECT * FROM movies WHERE category = "kaland"';
+    $sqlKaland = 'SELECT * FROM movies WHERE category = "adventure" LIMIT 5';
     $result = mysqli_query($conn, $sqlKaland);
     $kalandFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlDrama = 'SELECT * FROM movies WHERE category = "dráma"';
+    $sqlDrama = 'SELECT * FROM movies WHERE category = "drama" LIMIT 5';
     $result = mysqli_query($conn, $sqlDrama);
     $dramaFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlHorror = 'SELECT * FROM movies WHERE category = "horror"';
+    $sqlHorror = 'SELECT * FROM movies WHERE category = "horror" LIMIT 5';
     $result = mysqli_query($conn, $sqlHorror);
     $horrorFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sqlAnimacio = 'SELECT * FROM movies WHERE category = "animáció"';
+    $sqlAnimacio = 'SELECT * FROM movies WHERE category = "animated" LIMIT 5';
     $result = mysqli_query($conn, $sqlAnimacio);
     $animacioFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -56,6 +56,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/topButton.css" rel="stylesheet">
 
 </head>
 
@@ -80,26 +81,19 @@
         <?php
         include 'logout.php';
         ?>
-
-
-        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
-
-
       </div>
     </nav>
-
   </section>
 
 
   <!-- Begin page content -->
       <div class="main-container">
-        <h4 class="valami"> <a href="akcio.php">Akció »</a></h4>
+        <h4 class="movieCards"> <a class="category-title" href="akcio.php">Action »</a></h4>
         <div class="card-deck">
           <?php foreach($akcioFilmek as $akcio) { ?>
                 <div class='card'>
                     <a href='movie.php?id= <?php echo $akcio['movieid'] ?>'>
-                <img class="card-img-top" src="img/<?php echo ($akcio['img']); ?>" alt="">
+                <img class="card-img-top" src="<?php echo ($akcio['img']); ?>" alt="">
                   </a>
                 </div>
 
@@ -110,12 +104,12 @@
 
 
 
-        <h4 class="valami"><a href="kaland.php">Kaland »</a></h4>
+        <h4 class="movieCards"><a class="category-title" href="kaland.php">Adventure »</a></h4>
         <div class="card-deck">
           <?php foreach($kalandFilmek as $kaland) { ?>
                 <div class='card'>
                 <a href='movie.php?id= <?php echo $kaland['movieid'] ?>'>
-                  <img class="card-img-top" src="img/<?php echo ($kaland['img']); ?>" alt="">
+                  <img class="card-img-top" src="<?php echo ($kaland['img']); ?>" alt="">
                   </a>
                 </div>
 
@@ -125,12 +119,12 @@
         </div>
 
 
-      <h4 class="valami"><a href="drama.php">Dráma »</a></h4>
+      <h4 class="movieCards"><a class="category-title" href="drama.php">Drama »</a></h4>
       <div class="card-deck">
         <?php foreach($dramaFilmek as $drama) { ?>
               <div class='card'>
               <a href='movie.php?id= <?php echo $drama['movieid'] ?>'>
-                <img class="card-img-top" src="img/<?php echo ($drama['img']); ?>" alt="">
+                <img class="card-img-top" src="<?php echo ($drama['img']); ?>" alt="">
                 </a>
               </div>
         <?php
@@ -139,12 +133,12 @@
       </div>
 
 
-      <h4 class="valami"><a href="horror.php">Horror »</a></h4>
+      <h4 class="movieCards"><a class="category-title" href="horror.php">Horror »</a></h4>
       <div class="card-deck">
         <?php foreach($horrorFilmek as $horror) { ?>
               <div class='card'>
               <a href='movie.php?id= <?php echo $horror['movieid'] ?>'>
-                <img class="card-img-top" src="img/<?php echo ($horror['img']); ?>" alt="">
+                <img class="card-img-top" src="<?php echo ($horror['img']); ?>" alt="">
                 </a>
               </div>
 
@@ -152,16 +146,14 @@
             }
           ?>
       </div>
-
-      <h4 class="valami"><a href="animacio.php">Animáció »</a></h4>
+      <h4 class="movieCards"><a class="category-title" href="animacio.php">Animated »</a></h4>
       <div class="card-deck">
         <?php foreach($animacioFilmek as $animacio) { ?>
               <div class='card'>
               <a href='movie.php?id= <?php echo $animacio['movieid'] ?>'>
-                <img class="card-img-top" src="img/<?php echo ($animacio['img']); ?>" alt="">
+                <img class="card-img-top" src="<?php echo ($animacio['img']); ?>" alt="">
                 </a>
               </div>
-
         <?php
             }
           ?>
@@ -170,16 +162,11 @@
 
 
   </div>
+
+  <div id="topButton">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+  <script src="topButton.js"></script>
+</div>
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <span>Copyright 2020</span>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-  </script>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

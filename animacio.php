@@ -1,7 +1,7 @@
 <?php
     include('includes/dbc.php');
 
-    $sql = 'SELECT * FROM movies WHERE category = "animáció" ORDER BY name';
+    $sql = 'SELECT * FROM movies WHERE category = "animated" ORDER BY name';
     $result = mysqli_query($conn, $sql);
     $animacioFilmek = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -9,8 +9,8 @@
     //
     // mysqli_close($conn);
 
-
     session_start();
+
 ?>
 
 
@@ -39,7 +39,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
-  <link href="css/allMovies.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -56,6 +56,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         </ul>
+
         <!-- <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Film, sorozat..." aria-label="Search">
           <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
@@ -64,8 +65,6 @@
         <?php
         include 'logout.php';
         ?>
-                <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button> -->
-
 
       </div>
     </nav>
@@ -75,7 +74,7 @@
 
   <div class="main-container">
 
-    <div class="content valami">
+    <div class="content">
       <h4 class="all-movies-title">Animated movies</h4>
 
       	<div class="container">
@@ -85,22 +84,20 @@
 
       				<div class="col-lg-3 poster-container">
                 <a href='movie.php?id= <?php echo $animacio['movieid'] ?>'>
-      							<img class="card-img-top" src="img/<?php echo ($animacio['img']); ?>" alt="">
+      							<img class="card-img-category" src="<?php echo ($animacio['img']); ?>" alt="">
                 </a>
       				</div>
 
       			<?php } ?>
 
       		</div>
-
-          <?php
+      <?php
             if(isset($_SESSION["useruid"])) {
               if($_SESSION["useruid"] == "admin")
-              echo "<button class='add-movie btn btn-dark my-2 my-sm-0' type='submit'><a class='add-movie-link' href='addMovie.php'>Add movie</a></button>";
+              echo "<button class='add-movie-btn btn btn-dark my-2 my-sm-0' type='submit'><a class='add-movie-link' href='addMovie.php'>Add movie</a></button>";
             }
           ?>
 
-            <!-- <button class="add-movie btn btn-dark my-2 my-sm-0" type="submit"><a class="add-movie-link" href="addMovie.php">Add movie</a></button> -->
       	</div>
 
     </div>
@@ -108,16 +105,8 @@
 
   </div>
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container-footer">
-      <span>Copyright 2020</span>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-  </script>
-
-
+    <?php
+    include_once 'footer.php';
+     ?>
 
 </html>

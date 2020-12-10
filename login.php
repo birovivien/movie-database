@@ -52,9 +52,6 @@
         include 'logout.php';
         ?>
 
-        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
-
       </div>
     </nav>
 
@@ -66,10 +63,10 @@
 
   <div class="main-container">
 
-    <div class="content valami">
+    <div class="content">
 
     <form class="form-signin" action="includes/login.inc.php" method="post">
-      <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
+      <h1 class="h3 mb-3 font-weight-bold">Log In</h1>
       <input type="text" class="form-control" name="uid" placeholder="Username/Email" autofocus>
       <input type="password" class="form-control" name="pwd" placeholder="Password">
       <button class="btn btn-lg btn-dark btn-block" type="submit" name="submit">Log In</button>
@@ -78,9 +75,9 @@
     <?php
       if(isset($_GET["error"])) {
         if($_GET["error"] == "emptyinput") {
-          echo "<p> Fill in all fields! </p>";
+          echo "<p class='errorMessage'> Fill in all the fields! </p>";
         } else if($_GET["error"] == "wronglogin") {
-          echo "<p> Incorrect login credentials! </p>";
+          echo "<p class='errorMessage'> Invalid login credentials! </p>";
         }
       }
     ?>
@@ -97,15 +94,7 @@
 
 
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container-footer">
-      <span>Copyright 2020</span>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-  </script>
+
 
 
 

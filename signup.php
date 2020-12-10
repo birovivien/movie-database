@@ -52,9 +52,6 @@
         include 'logout.php';
         ?>
 
-        <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="signup.php">Sign Up</a></button>
-        <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.php">Log In</a></button> -->
-
       </div>
     </nav>
 
@@ -66,35 +63,35 @@
 
   <div class="main-container">
 
-    <div class="content valami">
+    <div class="content">
 
-        <section class="signup-form">
-          <h2>Sign Up</h2>
+        <section class="form-signup">
+          <h1 class="h3 mb-3 font-weight-bold">Sign Up</h1>
           <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="name" placeholder="Full name">
-            <input type="email" name="email" placeholder="Email">
-            <input type="text" name="uid" placeholder="Username">
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwdrepeat" placeholder="Repeat password"> <br>
-            <button type="submit" name="submit">Sign Up</button>
+            <input class="form-control" type="text" name="name" placeholder="Full name">
+            <input class="form-control" type="email" name="email" placeholder="Email">
+            <input class="form-control" type="text" name="uid" placeholder="Username">
+            <input class="form-control" type="password" name="pwd" placeholder="Password">
+            <input class="form-control" type="password" name="pwdrepeat" placeholder="Repeat password"> <br>
+            <button class="btn btn-lg btn-dark btn-block" type="submit" name="submit">Sign Up</button>
           </form>
 
           <?php
             if(isset($_GET["error"])) {
               if($_GET["error"] == "emptyinput") {
-                echo "<p> Fill in all fields! </p>";
+                echo "<p class='errorMessage'> Fill in all fields! </p>";
               } else if($_GET["error"] == "invaliduid") {
-                echo "<p> Choose a proper username! </p>";
+                echo "<p class='errorMessage'> Choose a proper username! </p>";
               } else if($_GET["error"] == "invalidemail") {
-                echo "<p> Choose a proper email! </p>";
+                echo "<p class='errorMessage'> Choose a proper email! </p>";
               } else if($_GET["error"] == "passwordsdontmatch") {
-                echo "<p> Passwords don't match! </p>";
+                echo "<p class='errorMessage'> Passwords don't match! </p>";
               } else if($_GET["error"] == "stmtfailed") {
-                echo "<p> Something went wrong, try again! </p>";
+                echo "<p class='errorMessage'> Something went wrong, try again! </p>";
               } else if($_GET["error"] == "usernametaken") {
-                echo "<p> Username already taken! </p>";
+                echo "<p class='errorMessage'> Username already taken! </p>";
               } else if($_GET["error"] == "none") {
-                echo "<p> You have successfully signed up! </p>";
+                echo "<p class='errorMessage'> You have successfully signed up! </p>";
               }
             }
           ?>
@@ -111,16 +108,4 @@
 
 
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container-footer">
-      <span>Copyright 2020</span>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-  </script>
-
-
-
 </html>

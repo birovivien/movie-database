@@ -44,8 +44,8 @@ if(isset($_GET['id'])) {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <!-- Custom styles for this template -->
-  <link href="css/styleMovie.css" rel="stylesheet">
-  <link href="css/movie.css" rel="stylesheet">
+  <!-- <link href="css/styleMovie.css" rel="stylesheet"> -->
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -71,18 +71,19 @@ if(isset($_GET['id'])) {
         include 'logout.php';
         ?>
 
-            <!-- <button class="sign-in btn btn-dark my-2 my-sm-0" type="text"><a class="login-btn" href="login.html">Log In</a></button> -->
       </div>
     </nav>
 
-  </section>
+    </section>
+
+
 
 
   <div class="main-container">
 
-    <div class="content valami">
+    <div class="content-movie">
       <?php if($movie): ?>
-        <img src="img/<?php echo ($movie['img']); ?>" alt="">
+        <img src="<?php echo ($movie['img']); ?>" alt="">
         <h3> <?php echo ($movie['name']) ?> </h3>
         <p>  <?php echo ($movie['description']) ?> </p>
 
@@ -90,27 +91,13 @@ if(isset($_GET['id'])) {
       <?php endif; ?>
 
     </div>
-
-
-
-
-
-
-
-
-
   </div>
+
+
 </body>
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <span>Copyright 2020</span>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-  </script>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<?php
+include_once 'footer.php';
+ ?>
 
 
 </html>
