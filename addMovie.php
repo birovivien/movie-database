@@ -49,8 +49,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v4.1.1">
   <title>Filmadatbázis</title>
 
 
@@ -103,15 +101,15 @@
             <h1 class="h3 mb-3 font-weight-bold">Add a movie to the database</h1>
           </div>
           <form class="form-addmovie" method='POST' action='addMovie.php'>
-            <input type='text' class="form-control" id='name' placeholder='Title' required name='name'/>
-            <input type='text' class="form-control" id='description' placeholder='Description' maxlength="800" required name='description'/>
-            <input type='url' class="form-control" id='img' placeholder='Poster URL' required name='img'/>
-            <select class="form-control" id='category' required name='category'>
-            <option value="akció">Action</option>
-            <option value="kaland">Adventure</option>
-            <option value="dráma">Drama</option>
+            <input type='text' class="form-control" id='name' placeholder='Title' name='name' required/>
+            <input type='text' class="form-control" id='description' contenteditable="true" placeholder='Description' name='description'/>
+            <input type='url' class="form-control" id='img' placeholder='Poster URL' name='img' required/>
+            <select class="form-control" id='category' name='category' required>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="drama">Drama</option>
             <option value="horror">Horror</option>
-            <option value="animáció">Animated</option>
+            <option value="animated">Animated</option>
             </select>
             <button class="add-movie btn btn-lg btn-dark btn-block ml-auto mr-auto" type="submit" name="submit">Add Movie</button>
           </form>

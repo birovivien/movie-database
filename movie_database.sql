@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2020 at 03:16 PM
+-- Generation Time: Dec 10, 2020 at 07:55 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -66,14 +66,9 @@ INSERT INTO `movies` (`movieid`, `name`, `description`, `img`, `category`) VALUE
 (38, 'Baby Driver', 'Baby is a young and partially hearing impaired getaway driver who can make any wild move while in motion with the right track playing. It\'s a critical talent he needs to survive his indentured servitude to the crime boss, Doc, who values his role in his meticulously planned robberies. However, just when Baby thinks he is finally free and clear to have his own life with his new girlfriend, Debora, Doc coerces him back for another job. Now saddled with a crew of thugs too violently unstable to keep to Doc\'s plans, Baby finds himself and everything he cares for in terrible danger. To survive and escape the coming maelstrom, it will take all of Baby\'s skill, wits and daring, but even on the best track, can he make it when life is forcing him to face the music?', 'https://images-na.ssl-images-amazon.com/images/I/717QDxYBkbL._AC_SL1024_.jpg', 'action'),
 (39, 'Dora and the Lost City of Gold', 'Having spent most of her life exploring the jungle with her parents, nothing could prepare Dora for her most dangerous adventure ever: high school. Always the explorer, Dora quickly finds herself leading Boots, Diego, a mysterious jungle inhabitant, and a ragtag group of teens on a live-action adventure to save her parents and solve the impossible mystery behind a lost Inca civilization.', 'https://m.media-amazon.com/images/M/MV5BOTVhMzYxNjgtYzYwOC00MGIwLWJmZGEtMjgwMzgxMWUwNmRhXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg', 'adventure'),
 (40, 'The Princess and the Frog', 'A modern day retelling of the classic story The Frog Prince. The Princess and the Frog finds the lives of arrogant, carefree Prince Naveen and hardworking waitress Tiana crossing paths. Prince Naveen is transformed into a frog by a conniving voodoo magician and Tiana, following suit, upon kissing the amphibian royalty. With the help of a trumpet-playing alligator, a Cajun firefly, and an old blind lady who lives in a boat in a tree, Naveen and Tiana must race to break the spell and fulfill their dreams.', 'https://images-na.ssl-images-amazon.com/images/I/81Vp8un09cL._AC_SL1500_.jpg', 'animated'),
-(41, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(42, 'Captain Underpants', 'sdf', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(43, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(44, 'asd', 'asd', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'kaland'),
-(45, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(46, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(47, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció'),
-(48, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animáció');
+(48, 'Captain Underpants', 'George and Harold are two imaginative pranksters who make the depressing Jerome Horwitz School a better place. They hypnotize their nemesis, the mean-spirited principal Mr. Krupp. He transforms into the incredibly clueless yet kind-hearted and enthusiastic superhero named Captain Underpants. Even without the mean principal, they discover that having Captain Underpants comes at a steep price. Meanwhile, Professor Poopypants tries to eliminate laughter with the school snitch Melvin, and George and Harold discover that there may be more to Mr. Krupp than they had originally thought.', 'https://i.pinimg.com/originals/21/2a/11/212a11cf4a3c6e2b9e71a4d47ea18320.jpg', 'animated'),
+(69, 'King-kong', 'séflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdg', 'https://images-na.ssl-images-amazon.com/images/I/51B5dzeLdyL._AC_.jpg', 'adventure'),
+(71, 'The Invisible Man', 'séflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdgséflks áéglksfgé lkdfgáé kdfg áélkfdg', 'https://bloximages.chicago2.vip.townnews.com/newsbug.info/content/tncms/assets/v3/editorial/c/d1/cd147de4-cf4b-5a20-926c-023d0104a5e2/5e6634ea355fb.image.jpg', 'drama');
 
 -- --------------------------------------------------------
 
@@ -94,14 +89,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`usersId`, `usersName`, `usersEmail`, `userUid`, `usersPwd`) VALUES
-(1, 'asdad', 'birovivien95@gmail.com', 'birovivien', '$2y$10$CgEUuWRm/SE26IWRI/G2ouR3yq0NWypEnEf57gdg0lsOTQLv8CVD2'),
-(2, '123123', 'valami@gmail.com', 'asdfsdf', '$2y$10$BfQ0vB4eX6B2ehcj746Jv.5BbmMWbL1sqzSozBLxnwSqHs1yWGI/e'),
-(3, 'something', 'someting@gmail.com', 'asdasd', '$2y$10$V7c4Xr6aTLG2jUanBeHHW.ij3KrK36bRsCtG59TBmvfrh4vtRlUwq'),
-(4, 'valakivalaki', 'igen@gmail.com', 'igen', '$2y$10$ukBDtLobYt8gEu889aE4YueoMzVRUGgaBPcq0H4d.k/iAQEcgaRem'),
-(5, 'Vivien Bíró', 'aaaa@aaa.hu', 'aaa', '$2y$10$6PGPTHnG8qqlszR5hRLF4edmaquTANYDARaDfTczS4.NeewONFSn6'),
-(6, 'Vivien Bíró', 'asdasd@gmail.com', 'asdasdasd', '$2y$10$DTQ1q12/loHFKTyLghXihOkkUbnL8IZb7F667oiJnd3BNiuQu/qzW'),
-(7, 'admin admin', 'admin@admin.hu', 'admin', '$2y$10$aeiSYHrzGz8W5A9z25wsq.xGRtu7Jx3eew.kBfojI6H.OYoqr9vFi'),
-(10, 'nyenykó', 'nyenyi@nyeni.hu', 'nyenyimenyi', '$2y$10$4Q/dHqtMyidtcP7LvkaHTuIvEVJKcC2NxxBEkA5CKFggP0NFWiIri');
+(7, 'admin admin', 'admin@admin.hu', 'admin', '$2y$10$aeiSYHrzGz8W5A9z25wsq.xGRtu7Jx3eew.kBfojI6H.OYoqr9vFi');
 
 --
 -- Indexes for dumped tables
@@ -127,7 +115,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `movieid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `movieid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `users`

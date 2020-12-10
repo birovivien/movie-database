@@ -40,6 +40,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/topButton.css" rel="stylesheet">
 
 </head>
 
@@ -104,6 +105,11 @@
 
 
   </div>
+
+  <div id="topButton">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+  <script src="topButton.js"></script>
+</div>
 </body>
     <?php
     include_once 'footer.php';

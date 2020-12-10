@@ -1,15 +1,19 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
-  height: 100%;
-  background-color: #aeffdf;
-  display: -ms-flexbox;
-  -ms-flex-align: center;
-  align-items: center;
+  background-color: #43444d;
 }
 
 .navbar {
   padding: 0 16%;
+  max-width: 100%;
   font-size: 1.25rem;
-  background-color: #2d6187;
+  background-color: #ebebed;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 8px solid #43444d;
 }
 
 .navbar-dark .navbar-nav .nav-link{
@@ -37,7 +41,7 @@ body {
 }
 
 .main-container {
-  background-color: white;
+  background-color: #ebebed;
   width: 70%;
   margin: 0 auto;
 }
