@@ -111,8 +111,5 @@
   <script src="topButton.js"></script>
 </div>
 </body>
-    <?php
-    include_once 'footer.php';
-     ?>
 
 </html>
